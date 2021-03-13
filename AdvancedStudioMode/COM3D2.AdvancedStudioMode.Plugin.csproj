@@ -1,0 +1,97 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{74643B7F-31D6-49CC-ACFE-5949AB5ABBE0}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <RootNamespace>AdvancedStudioMode</RootNamespace>
+    <AssemblyName>COM3D2.AdvancedStudioMode.Plugin</AssemblyName>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+    <FileAlignment>4096</FileAlignment>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>portable</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <FileAlignment>512</FileAlignment>
+    <BaseAddress>285212672</BaseAddress>
+    <NoWarn>1701;1702</NoWarn>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Assembly-CSharp">
+      <HintPath>..\..\..\..\..\KISS\COM3D2\COM3D2x64_Data\Managed\Assembly-CSharp.dll</HintPath>
+    </Reference>
+    <Reference Include="Assembly-CSharp-firstpass">
+      <HintPath>..\..\..\..\..\KISS\COM3D2\COM3D2x64_Data\Managed\Assembly-CSharp-firstpass.dll</HintPath>
+    </Reference>
+    <Reference Include="Assembly-UnityScript-firstpass">
+      <HintPath>..\..\..\..\..\KISS\COM3D2\COM3D2x64_Data\Managed\Assembly-UnityScript-firstpass.dll</HintPath>
+    </Reference>
+    <Reference Include="ExIni">
+      <HintPath>..\..\..\..\..\KISS\COM3D2\COM3D2x64_Data\Managed\ExIni.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="UnityEngine, Version=0.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\KISS\COM3D2\COM3D2x64_Data\Managed\UnityEngine.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityInjector, Version=1.0.4.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\KISS\COM3D2\Sybaris\UnityInjector.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <AppDesigner Include="Properties\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AssemblyInfo.cs" />
+    <Compile Include="CM3D2.AdvancedStudioMode.Plugin\AdvancedStudioMode.Config.cs" />
+    <Compile Include="CM3D2.AdvancedStudioMode.Plugin\AdvancedStudioMode.cs" />
+    <Compile Include="CM3D2.AdvancedStudioMode.Plugin\AdvancedStudioMode.Gui.cs" />
+    <Compile Include="CM3D2.AdvancedStudioMode.Plugin\AdvancedStudioMode.IK.cs" />
+    <Compile Include="CM3D2.AdvancedStudioMode.Plugin\AdvancedStudioMode.Init.cs" />
+    <Compile Include="CM3D2.AdvancedStudioMode.Plugin\AdvancedStudioMode.Update.cs" />
+    <Compile Include="ComboBox2.cs" />
+    <Compile Include="CRC32.cs" />
+    <Compile Include="IK.cs" />
+    <Compile Include="ImportCM2.cs" />
+    <Compile Include="MouseDrag.cs" />
+    <Compile Include="MouseDrag2.cs" />
+    <Compile Include="MouseDrag3.cs" />
+    <Compile Include="MouseDrag4.cs" />
+    <Compile Include="MouseDrag5.cs" />
+    <Compile Include="MouseDrag6.cs" />
+    <Compile Include="CM3D2.AdvancedStudioMode.Plugin\AdvancedStudioMode.MaidUpdate.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="lib\Assembly-CSharp-firstpass.dll" />
+    <Content Include="lib\Assembly-CSharp.dll" />
+    <Content Include="lib\Assembly-UnityScript-firstpass.dll" />
+    <Content Include="lib\ExIni.dll" />
+    <Content Include="lib\UnityEngine.dll" />
+    <Content Include="lib\UnityInjector.dll" />
+    <Content Include="temp.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Properties\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
